@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terra Grow Mate - Expert Soil Analysis</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- VIEW 1: LANDING / LOGIN SCREEN -->
+    <div id="loginView" class="view-container active">
+        <div class="card landing-card">
+            <div class="card-header">
+                <h2>Terra Grow Mate 🌱</h2>
+                <p class="subtitle">Smart Agricultural Intelligence Platform</p>
+            </div>
+            <div class="login-form">
+                <p class="welcome-text">Sign in to access advanced soil testing and crop prediction modules.</p>
+                <div class="form-group">
+                    <label for="username">Farmer / Agronomist Name</label>
+                    <input type="text" id="username" placeholder="Enter your name" value="Farmer John">
+                </div>
+                <button type="button" class="submit-btn" id="loginBtn">Enter Dashboard</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- VIEW 2: MAIN DASHBOARD -->
+    <div id="dashboardView" class="view-container">
+        <div class="card dashboard-card">
+            <div class="dashboard-nav">
+                <h2>Terra Grow Mate 🌿</h2>
+                <button id="logoutBtn" class="secondary-btn">Sign Out</button>
+            </div>
+
+            <!-- Mode Selector Tabs -->
+            <div class="tab-container">
+                <button class="tab-btn active" data-tab="manualForm">Parameter Entry</button>
+                <button class="tab-btn" data-tab="imageForm">Image Analysis</button>
+            </div>
+
+            <!-- TAB 1: MANUAL PARAMETERS -->
+            <form id="manualForm" class="tab-content active">
+                <div class="form-group">
+                    <label for="ph">Soil pH Level (0 - 14)</label>
+                    <input type="number" step="0.1" id="ph" value="6.5" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="texture">Soil Texture Type</label>
+                    <select id="texture">
+                        <option value="Loam" selected>Loam</option>
+                        <option value="Clay">Clay</option>
+                        <option value="Sandy Loam">Sandy Loam</option>
+                        <option value="Silty Loam">Silty Loam</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="nitrogen">Nitrogen Level</label>
+                    <select id="nitrogen">
+                        <option value="low">Low Nitrogen</option>
+                        <option value="medium" selected>Medium Nitrogen</option>
+                        <option value="high">High Nitrogen</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="submit-btn">Run Soil Analysis</button>
+            </form>
+
+            <!-- TAB 2: IMAGE UPLOAD -->
+            <form id="imageForm" class="tab-content">
+                <div class="form-group">
+                    <label for="soilImage">Upload Soil / Crop Sample Image</label>
+                    <div class="file-drop-zone">
+                        <input type="file" id="soilImage" accept="image/*">
+                        <span id="fileNameDisplay">Choose an image file (e.g. clay_sample.jpg)</span>
+                    </div>
+                </div>
+                <button type="submit" class="submit-btn">Analyze Image & Generate Report</button>
+            </form>
+
+            <!-- RESULTS CONTAINER -->
+            <div id="results" class="results-container"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

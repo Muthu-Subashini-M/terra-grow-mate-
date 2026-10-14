@@ -1,0 +1,42 @@
+{
+  "Rice": {
+    "ideal_ph_min": 5.5,
+    "ideal_ph_max": 6.5,
+    "preferred_textures": [
+      "Clay",
+      "Clay Loam"
+    ],
+    "nitrogen_need": "high",
+    "description": "Thrives in water-retentive clay soils with slightly acidic to neutral pH."
+  },
+  "Wheat": {
+    "ideal_ph_min": 6.0,
+    "ideal_ph_max": 7.0,
+    "preferred_textures": [
+      "Loam",
+      "Silty Loam"
+    ],
+    "nitrogen_need": "medium",
+    "description": "Performs best in well-drained loamy soils with balanced moisture."
+  },
+  "Maize (Corn)": {
+    "ideal_ph_min": 5.8,
+    "ideal_ph_max": 7.0,
+    "preferred_textures": [
+      "Loam",
+      "Sandy Loam"
+    ],
+    "nitrogen_need": "high",
+    "description": "Requires nutrient-rich loamy soil with good aeration."
+  },
+  "Chickpea": {
+    "ideal_ph_min": 6.2,
+    "ideal_ph_max": 8.0,
+    "preferred_textures": [
+      "Sandy Loam",
+      "Loam"
+    ],
+    "nitrogen_need": "low",
+    "description": "Prefers drier, lighter soils with neutral to alkaline pH levels."
+  }
+}
